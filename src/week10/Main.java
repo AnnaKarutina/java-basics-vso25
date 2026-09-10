@@ -2,7 +2,7 @@ package week10;
 
 public class Main {
     public static void main(String[] args) {
-        BulkTank tank = new BulkTank();
+        /*BulkTank tank = new BulkTank();
         tank.getFromTank(100);
         tank.addToTank(25);
         tank.getFromTank(5);
@@ -10,9 +10,9 @@ public class Main {
 
         tank = new BulkTank(50);
         tank.addToTank(100);
-        System.out.println(tank);
+        System.out.println(tank);*/
 
-        Cow cow = new Cow();
+        /*Cow cow = new Cow();
         System.out.println(cow);
 
         Alive livingCow = cow;
@@ -32,6 +32,29 @@ public class Main {
         cow.liveHour();
         System.out.println(cow);
         cow.milk();
-        System.out.println(cow);
+        System.out.println(cow);*/
+
+        MilkingRobot milkingRobot = new MilkingRobot();
+        Cow cow = new Cow();
+        System.out.println("");
+
+        BulkTank tank = new BulkTank();
+        milkingRobot.setBulkTank(tank);
+        System.out.println("Bulk tank: " + tank);
+        System.out.println();
+
+        for(int i = 0; i < 2; i++) {
+            System.out.println(cow);
+            System.out.println("Living..");
+            for(int j = 0; j < 5; j++) {
+                cow.liveHour();
+            }
+            System.out.println(cow);
+
+            System.out.println("Milking...");
+            milkingRobot.milk(cow);
+            System.out.println("Bulk tank: " + tank);
+            System.out.println("");
+        }
     }
 }
