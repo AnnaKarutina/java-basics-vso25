@@ -59,7 +59,7 @@ public class Main {
             System.out.println("");
         }*/
 
-        Barn barn = new Barn(new BulkTank());
+        /*Barn barn = new Barn(new BulkTank());
         System.out.println("Barn: " + barn);
 
         MilkingRobot robot = new MilkingRobot();
@@ -82,6 +82,43 @@ public class Main {
         }
 
         barn.takeCareOf(cowList);
-        System.out.println("Barn: " + barn);
+        System.out.println("Barn: " + barn);*/
+
+        /*Farm farm = new Farm("Esko", new Barn(new BulkTank()));
+        System.out.println(farm);
+
+        System.out.println(farm.getOwner() + " is a tough guy!");*/
+
+        /*Farm farm = new Farm("Esko", new Barn(new BulkTank()));
+        farm.addCow(new Cow());
+        farm.addCow(new Cow());
+        farm.addCow(new Cow());
+        System.out.println(farm);*/
+
+        /*Farm farm = new Farm("Esko", new Barn(new BulkTank()));
+
+        farm.addCow(new Cow());
+        farm.addCow(new Cow());
+        farm.addCow(new Cow());
+
+        farm.liveHour();
+        farm.liveHour();
+        System.out.println(farm);*/
+
+        Farm farm = new Farm("Esko", new Barn(new BulkTank()));
+        MilkingRobot robot = new MilkingRobot();
+        farm.installMilkingRobot(robot);
+
+        farm.addCow(new Cow());
+        farm.addCow(new Cow());
+        farm.addCow(new Cow());
+
+
+        farm.liveHour();
+        farm.liveHour();
+
+        farm.manageCows();
+
+        System.out.println(farm);
     }
 }
